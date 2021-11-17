@@ -10,13 +10,15 @@ Create an empty file at the project root named `.env.local` as shown:
 
 ```
 GOOGLE_MAPS_API_KEY=[YOUR GOOGLE MAPS API KEY HERE]
-GOOGLE_MAPS_API_VERSION=[DESIRED JS LIBRARY VERSION HERE]
 ```
+# Installing and running the project
+
+Clone the repo and then run `yarn install` to install dependencies. I recommend using VSCode to debug. There are two debug configurations included in `.vscode/launch.json`: 1) Run "Next.js: debug server-side" to start the server with the debugger attached, and 2) run "Launch Chrome, Google Maps v3.45" or "Launch Chrome, Google Maps v3.46" to view and debug the page in Google Chrome.
+
+# Google Maps JS Version
 
 The library version can be any of those [supported by Google](https://developers.google.com/maps/documentation/javascript/versions).
 
 With `3.45`, the map marker is draggable as expected. With `3.46` it is not - attempting to drag the marker instead moves the whole map and the mouse cursor does not change when hovering over the marker.
 
-# Installing and running the project
-
-Clone the repo and then run `yarn install` to install dependencies. I recommend using VSCode to debug. There are two debug configurations included in `.vscode/launch.json`: 1) Run "Next.js: debug server-side" to start the server with the debugger attached, and 2) run "Launch Chrome" to view and debug the page in Google Chrome.
+The desired version is configured by setting a query string parameter `v`, e.g. https://localhost:3000/?v=3.46

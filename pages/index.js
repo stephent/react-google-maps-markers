@@ -51,11 +51,13 @@ export default function Home({ googleMaps }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps({ query }) {
   
+  const v = query.v
+
   let googleMaps = {
     apiKey: process.env.GOOGLE_MAPS_API_KEY,
-    version: process.env.GOOGLE_MAPS_API_VERSION
+    version: v
   }
 
   return {

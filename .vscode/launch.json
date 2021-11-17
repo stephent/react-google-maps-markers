@@ -13,8 +13,15 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome",
-            "url": "http://localhost:3000",
+            "name": "Launch Chrome, Google Maps v3.45",
+            "url": "http://localhost:3000/?v=3.45",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome, Google Maps v3.46",
+            "url": "http://localhost:3000/?v=3.46",
             "webRoot": "${workspaceFolder}"
         },
     ]
