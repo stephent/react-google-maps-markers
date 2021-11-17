@@ -31,7 +31,7 @@ export default function Home({ googleMaps }) {
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
           { googleMaps && googleMaps.version ? 
             <CustomMap {...googleMaps} coordinate={{lat: 40, lng: -105}} /> :
-            <p>Please configure an API GOOGLE_MAPS_API_KEY and GOOGLE_MAPS_API_VERSION in your <pre>.env.local</pre> file</p>
+            <p>Please configure an API GOOGLE_MAPS_API_KEY in your <pre>.env.local</pre> file and be sure to set the desired Google Maps version via query parameter, e.g. <pre>/?v=3.46</pre>.</p>
           }
         </div>
       </main>
