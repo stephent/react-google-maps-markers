@@ -1,0 +1,17 @@
+/* Fix for markers being undraggable/unclickable, see 
+- https://stackoverflow.com/a/69031991/220287,
+- https://issuetracker.google.com/issues/198562471
+- https://github.com/JustFly1984/react-google-maps-api/issues/2881 
+- https://github.com/JustFly1984/react-google-maps-api/issues/2906
+*/
+.gm-style-moc {
+	height: unset !important;
+}
+
+/* Fix for missing StreetView Pegman icon. See
+- https://stackoverflow.com/questions/69027683/react-google-maps-api-googlemap-onclick-not-working/69031991#comment123764570_69031991
+*/
+.gm-svpc > div {
+	height: 100%;
+	width: 100%;
+}
