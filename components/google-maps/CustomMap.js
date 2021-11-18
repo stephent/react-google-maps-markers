@@ -20,7 +20,7 @@ export default function CustomMap({ apiKey, version, coordinate }) {
 		googleMapsApiKey: apiKey,
 		version: version,
 		libraries: googleMapsLibraries,
-		preventGoogleFontsLoading: true
+		preventGoogleFontsLoading: false
 	});
 
 	if (loadError) {
